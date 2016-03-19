@@ -14,4 +14,20 @@ class CollatzConjectureTest < Minitest::Test
     assert_equal(16,result)
   end
 
+  def test_collatz_counter_when_number_is_even
+    result = collatz(10)
+    assert_equal(6,result)
+  end
+
+  def test_collatz_counter_when_number_is_odd
+    result = collatz(3)
+    assert_equal(7,result)
+  end
+
+  def test_find_minimum_iterations
+    result = min_collatz_iterations(3,8)
+    assert_equal(4,result)
+  end
+  
+
 end
